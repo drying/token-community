@@ -10,7 +10,7 @@ contract TokenBank {
     string private _symbol;
 
     /// @dev Tokenの総供給量数
-    uint256 constant _totalsupply = 1000;
+    uint256 constant _totalSupply = 1000;
 
     /// @dev TokenBankが預かっているTokenの総額
     uint256 private _bankTotalDeposit;
@@ -42,4 +42,11 @@ contract TokenBank {
         address indexed from,
         uint256 amount
     );
+
+    constructor (string memory name_, string memory symbol_) {
+        _name = name_;
+        _symbol = symbol_;
+        owner = msg.sender;
+        _balances[owner] = _totalSupply;
+    }
 }
