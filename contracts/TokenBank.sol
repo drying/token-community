@@ -65,7 +65,7 @@ contract TokenBank {
         return _totalSupply;
     }
 
-    /// @dev 指定アカウントアドレスのToken残高をを返す
+    /// @dev 指定アカウントアドレスのToken残高を返す
     function balanceOf(address account) public view returns (uint256) {
         return _balances[account];
     }
