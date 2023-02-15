@@ -18,11 +18,6 @@ export default function Home() {
   const [items, setItems] = useState([])
   const goerliId = '0x5'
   const zeroAddress = "0x0000000000000000000000000000000000000000";
-
-  interface Window {
-    ethereum: any
-  }
-  declare var window: Window
   
   const checkMetaMaskInstalled = async () => {
     const { ethereum } = window;
